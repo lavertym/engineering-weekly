@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Engineering Weekly | Benefits of Using SASS</title>
+<meta name="description" content="This is what engineering is all about."/>
+<style>
+  body {
+    background-color:#ccc;
+    font-family:Arial, sans-serif;
+    text-align:center;
+  }
+        
+  .jen {
+    color: purple;
+    font-weight:bold;
+    left: 500px;
+    top: 300px;
+    position: absolute;
+    -webkit-animation: myOrbit 4s linear infinite;
+    -moz-animation: myOrbit 4s linear infinite;
+    -o-animation: myOrbit 4s linear infinite;
+    animation: myOrbit 4s linear infinite;
+    z-index:10
+  }
+
+  .whiskers {
+    left:200px;
+    top:400px;
+    position: absolute;
+    -webkit-animation: myOrbit 6s linear infinite;
+    -moz-animation: myOrbit 6s linear infinite;
+    -o-animation: myOrbit 6s linear infinite;
+    animation: myOrbit 6s linear infinite;
+  }
+
+  @-webkit-keyframes myOrbit {
+      from { -webkit-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+      to   { -webkit-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+  }
+
+  @-moz-keyframes myOrbit {
+      from { -moz-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+      to   { -moz-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+  }
+
+  @-o-keyframes myOrbit {
+      from { -o-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+      to   { -o-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+  }
+
+  @keyframes myOrbit {
+      from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+      to   { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+  }
+
+  .blink {
+    color:#333;
+    font-weight:bold;
+    font-size:20px;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      color:purple;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      color:purple;
+    }
+  }
+
+</style>
+</head>
+
+<body>
+  <h1 class="jen">HI JEN!</h1>
+  <img class="whiskers" src="whiskers.jpg" width="200px"/>
+  <span class="blink">Are you seeing this???</span>
+</body>
+</html>
