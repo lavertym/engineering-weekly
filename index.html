@@ -10,7 +10,14 @@
   }
         
   .jen {
-    color: purple;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
     font-weight:bold;
     left: 500px;
     top: 300px;
@@ -52,12 +59,14 @@
       to   { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
   }
 
-  .blink,
-  .blink a:visited,
-  .blink a:hover,
-  .blink a:link,
-  .blink a:active {
-    color:orange;
+  p {
+    color: purple;
+  }
+  a.blink:visited,
+  a.blink:hover,
+  a.blink:link,
+  a.blink:active {
+    color: orange;
     font-weight:bold;
     font-size:20px;
     animation: blink-animation 1s steps(5, start) infinite;
@@ -80,6 +89,6 @@
 <body>
   <h1 class="jen">HI JEN!</h1>
   <img class="whiskers" src="whiskers.jpg" width="200px"/>
-  <p class="blink">based on <a href="https://treetown.slack.com/archives/nom-nom-nom/p1462994211000075">this</a></p>
+  <p>based on <a class="blink" href="https://treetown.slack.com/archives/nom-nom-nom/p1462994211000075">this</a></p>
 </body>
 </html>
